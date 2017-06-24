@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class LoginController {
+    @RequestMapping("/")
+    public String toppage( HttpServletRequest request, HttpServletResponse response){
+        return "redirect:index.html";
+    }
 
     @RequestMapping(value="/login",method=RequestMethod.GET)
     public ModelAndView displayLogin(HttpServletRequest request, HttpServletResponse response) {
