@@ -22,27 +22,4 @@ public class LoginController {
         return model;
     }
 
-    @RequestMapping(value="/login",method=RequestMethod.POST)
-    public ModelAndView executeLogin(HttpServletRequest request, HttpServletResponse response, @ModelAttribute LoginBean loginBean){
-        ModelAndView model= null;
-        try{
-            boolean isValidUser = isValidUser(loginBean.username, loginBean.password);
-            if(isValidUser){
-                System.out.println("User Login Successful");
-                request.setAttribute("loggedInUser", loginBean.username);
-                model = new ModelAndView("welcome");
-            }else{
-                model = new ModelAndView("login");
-                model.addObject("loginBean", loginBean);
-                request.setAttribute("message", "Invalid credentials!!");
-            }
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        return model;
-    }
-    public boolean isValidUser(String username, String password) {
-        return (username.equals("a") && password.equals("a"));
-    }
-
 }
