@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginController {
     @RequestMapping("/")
     public String toppage( HttpServletRequest request, HttpServletResponse response){
-        return "redirect:index.html";
+        return "redirect:index";
     }
 
     @RequestMapping(value="/login",method=RequestMethod.GET)
