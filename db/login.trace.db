@@ -2,3 +2,7 @@
 org.h2.jdbc.JdbcSQLException: テーブル "USERSLOGIN_ID" が見つかりません
 Table "USERSLOGIN_ID" not found; SQL statement:
 select * from USERSLOGIN_ID [42102-195]
+2017-06-24 23:03:49 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECTSELECT[*] LOGIN_ID, PASSWORD, ENABLED, NAME FROM USERS WHERE LOGIN_ID=? "; 期待されるステートメント "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"
+Syntax error in SQL statement "SELECTSELECT[*] LOGIN_ID, PASSWORD, ENABLED, NAME FROM USERS WHERE LOGIN_ID=? "; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+selectSELECT LOGIN_ID, PASSWORD, ENABLED, NAME FROM USERS WHERE LOGIN_ID=? [42001-195]
